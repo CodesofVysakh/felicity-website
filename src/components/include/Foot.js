@@ -3,7 +3,9 @@ import styled from 'styled-components';
 
 export default function Foot() {
     return (
-        <Para>Copyright 2019 All Right Reserved By Free Html Templates</Para>
+        <Para>Copyright 2021 All Right Reserved By Free Html Templates</Para>
     )
 }
-const Para = styled.p``;
+const Para = styled.p`
+    text-align: center;
+`;

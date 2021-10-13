@@ -4,6 +4,7 @@ import Pic1 from '../../assets/images/img1.jpg'
 import Pic2 from '../../assets/images/img2.jpg'
 import Pic3 from '../../assets/images/img3.jpg'
 import Pic4 from '../../assets/images/img4.jpg'
+import '../../App.css'
 
 export default function Feature() {
     let renderItems = () => (
@@ -14,11 +15,11 @@ export default function Feature() {
                     <Para>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, voluptatibus! Dignissimos impedit, aperiam quam temporibus iusto vero cupiditate tempore. Aspernatur deleniti voluptates pariatur ab odit nam ullam quasi quibusdam enim, impedit repellendus eum qui dolorum sed sapiente odio harum rem.</Para>
                     <Button>See More</Button>
                 </Left>
-                <Right>
-                    <Pic src={Pic1} alt="Image" />
-                    <Pic src={Pic2} alt="Image"  />
-                    <Pic src={Pic3} alt="Image"  />
-                </Right>
+                <Container>
+                    <Pic className="Pic1" src={Pic1} alt="Image" />
+                    <Pic className="Pic2" src={Pic2} alt="Image"  />
+                    <Pic className="Pic3" src={Pic3} alt="Image"  />
+                </Container>
             </Item>
             <Item>
                 <Left>
@@ -34,20 +35,53 @@ export default function Feature() {
     )
 
     return (
-        <Items>
+        <Items className="wrapper">
             {renderItems()}
         </Items>
     )
 }
 
-const Items = styled.div``;
-const Item = styled.div``;
-const Left = styled.div``;
-const H3 = styled.h3``;
-const Span = styled.span``;
-const Para = styled.p``;
-const Button = styled.a``;
-const Right = styled.div``;
-const Pic = styled.img``;
-
-
+const Items = styled.div`
+    padding: 80px 0 0;
+`;
+const Item = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+`;
+const Left = styled.div`
+    width: 50%;
+    padding-right: 30px;
+`;
+const H3 = styled.h3`
+    text-transform: capitalize;
+    font-size: 55px;
+    margin-bottom: 20px;
+`;
+const Span = styled.span`
+    display: block;
+    font-weight: bold;
+`;
+const Para = styled.p`
+    line-height: 2em;
+    margin-bottom: 50px;
+`;
+const Button = styled.a`
+    background: #000;
+    color: #fff;
+    padding: 20px 60px;
+    border-radius: 10px;
+`;
+const Container = styled.div`
+    width: 50%;
+    display: grid;
+    grid-gap: 30px;
+`;
+const Pic = styled.img`
+    
+`;
+const Right = styled.div`
+    width: 50%;
+    text-align: right;
+`;

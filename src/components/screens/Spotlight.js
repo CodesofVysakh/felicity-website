@@ -25,19 +25,27 @@ export default function Spotlight() {
             </Content>
             <Bottom>
                 <Form>
-                    <Label>
-                        Arrival Date
-                    </Label>
-                    <Input type="text" />
-                    <Label>
-                        Departure Date
-                    </Label>
-                    <Input type="email" />
-                    <Label>
-                        Person
-                    </Label>
-                    <Input type="number" />
-                    <Input type="submit" value="Book Now" />
+                    <Wrap>
+                        <Label>
+                            Arrival Date
+                        </Label>
+                        <Input type="date"  />
+                    </Wrap>
+                    <Wrap>
+                        <Label>
+                            Departure Date
+                        </Label>
+                        <Input type="date" />
+                    </Wrap>
+                    <Wrap>    
+                        <Label>
+                            Person
+                        </Label>
+                        <Input type="number" placeholder="2" />
+                    </Wrap>
+                    <Wrap>
+                        <Submit type="submit" value="Book Now" />
+                    </Wrap>
                 </Form>
             </Bottom>
         </Div>
@@ -110,13 +118,44 @@ const Button = styled.a`
 const Bottom = styled.div`
     background: #fff;
     color: #000;
-    padding: 50px;
+    padding: 50px 80px 0;
     border-radius: 45px 45px 0 0;
 `;
-const Form = styled.form``;
-const Label = styled.label``;
-const Input = styled.input``;
-
+const Form = styled.form`
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+`;
+const Label = styled.label`
+    display: block;
+    color: #8c8c8c;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 15px;
+`;
+const Input = styled.input`
+    background: #eeeeee;
+    border-radius: 30px;
+    width: 90%;
+    &[type = "date"]{
+        padding: 10px 16px;
+    }
+    &[type = "number"]{
+        padding: 14px 24px;
+    }
+`;
+const Wrap = styled.div`
+    width: 25%;
+`;
+const Submit = styled.input`
+    background: #000;
+    color: #fff;
+    padding: 12px 32px;
+    border-radius: 10px;
+    width: 80%;
+    font-size: 19px;
+`;
 
 
 

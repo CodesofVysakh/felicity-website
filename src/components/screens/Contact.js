@@ -24,11 +24,17 @@ export default function Contact() {
     )
     return (
         <Block>
-            {renderItems()}
+            <Div className="wrapper">
+                {renderItems()}
+            </Div>
         </Block>
     )
 }
-const Block = styled.div``;
+const Block = styled.div`
+    background: #242423;
+    color: #fff;
+`;
+const Div = styled.div``;
 const Left = styled.div``;
 const H3 = styled.h3``;
 const H6 = styled.h6``;
