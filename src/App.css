@@ -71,3 +71,16 @@ p{
 	grid-column: 2;
 	grid-row: 2;
 }
+.slick-slider .slick-track, .slick-slider .slick-list{
+	margin: 0 auto;
+}
+.slick-dots li button:before {
+    font-size: 20px;
+    top: 20px;
+	opacity: 1;
+}
+.slick-dots li.slick-active button:before
+{
+	opacity: 1;
+    color: #d75430;
+}
