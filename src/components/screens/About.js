@@ -32,27 +32,51 @@ export default function About() {
 
 const AboutSection = styled.div`
     background: #353e4e;
-    padding: 60px 0;
+    padding: 100px 0;
+    @media all and (max-width: 640px){
+        padding: 80px 0;
+    }
+    @media all and (max-width: 480px){
+        padding: 50px 0;
+    }
 `;
 const AboutDiv = styled.div`
     color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media all and (max-width: 768px){
+        flex-direction: column;
+    }
 `;
 const Left = styled.div`
     width: 50%;
+    padding-right: 40px;
+    @media all and (max-width: 768px){
+        width: 100%;
+        margin-bottom: 20px;
+        padding-right: 0;
+    }
 `;
 const H5 = styled.h5`
     font-size: 50px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+    @media all and (max-width: 980px){
+        font-size: 35px;
+    }
 `;
 const Para = styled.p``;
 const Right = styled.div`
     width: 50%;
+    @media all and (max-width: 768px){
+        width: 100%;
+    }
+    
 `;
-const Container = styled.div``;
+const Container = styled.div`
+    
+`;
 const Img = styled.img``;
 
 

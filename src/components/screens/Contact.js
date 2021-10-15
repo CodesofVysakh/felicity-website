@@ -8,7 +8,7 @@ export default function Contact() {
                 <H3>
                     Contact Us
                 </H3>
-                <H6>Free download Landing <br />page Felicity Hotel</H6>
+                <H6>Free download Landing <Br />page Felicity Hotel</H6>
                 <Para>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,</Para>
             </Left>
             <Right>
@@ -17,7 +17,7 @@ export default function Contact() {
                     <Input type="email" placeholder="Email" />
                     <Input type="number" placeholder="Phone Number" />
                     <Message placeholder="Message" />
-                    <Submit value="Send" />
+                    <Submit type="submit" value="Send" />
                 </Form>
             </Right>
         </>
@@ -39,26 +39,50 @@ const Div = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    @media all and (max-width: 768px){
+        flex-direction: column-reverse;
+    }
 `;
 const Left = styled.div`
     width: 49%;
+    @media all and (max-width: 768px){
+        padding-top: 300px;
+        width: 100%;
+    }
 `;
 const H3 = styled.h3`
     font-size: 50px;
     font-weight: bold;
     margin-bottom: 20px;
+    @media all and (max-width: 480px){
+        font-size: 35px;
+    }
 `;
 const H6 = styled.h6`
     font-size: 35px;
     font-weight: bold;
     margin-bottom: 20px;
+    @media all and (max-width: 480px){
+        font-size: 20px;
+    }
+`;
+const Br = styled.br`
+    @media all and (max-width: 980px){
+        display: none;
+    }
 `;
 const Para = styled.p`
     font-size: 18px;
+    @media all and (max-width: 480px){
+        font-size: 14px;
+    }
 `;
 const Right = styled.div`
     width: 48%;
     position: relative;
+    @media all and (max-width: 768px){
+        width: 100%;
+    }
 `;
 const Form = styled.form`
     background: #d75430;
@@ -71,6 +95,7 @@ const Form = styled.form`
     bottom: -260px;
     right: 0;
     width: 100%;
+    
 `;
 const Input = styled.input`
     background: #fff;
@@ -93,5 +118,16 @@ const Submit = styled.input`
     width: 40%;
     text-align: center;
     margin: 0 auto;
+    cursor: pointer;
+    transition: 0.3s ease;
+    &:hover {
+        background: #f1ca4d;
+        color: #fff;
+        border-radius: 25px;
+        transition: 0.3s ease;
+    }
+    @media all and (max-width: 480px){
+        width: 60%;
+    }
 `;
 

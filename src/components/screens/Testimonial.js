@@ -15,6 +15,16 @@ export default function Testimonial() {
         slidesToScroll: 1,
         autoplay: true,
         arrows: false,
+        responsive : [ 
+        {
+            breakpoint: 640,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              initialSlide: 1
+            }
+          },
+        ]
     };
 
     let renderItems = () => (
@@ -25,7 +35,7 @@ export default function Testimonial() {
                     <H5>
                         Marc Johnson
                     </H5>
-                    <Container><img src={Quote} alt="Quote Image" /></Container>
+                    <Container><img src={Quote} alt="Quote" /></Container>
                     <Para>
                     There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,
                     </Para>
@@ -34,7 +44,7 @@ export default function Testimonial() {
                     <H5>
                         Marc Zukerberg
                     </H5>
-                    <Container><img src={Quote} alt="Quote Image" /></Container>
+                    <Container><img src={Quote} alt="Quote" /></Container>
                     <Para>
                     There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,
                     </Para>
@@ -43,7 +53,7 @@ export default function Testimonial() {
                     <H5>
                         Mac Du
                     </H5>
-                    <Container><img src={Quote} alt="Quote Image" /></Container>
+                    <Container><img src={Quote} alt="Quote" /></Container>
                     <Para>
                     There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,
                     </Para>
@@ -52,7 +62,7 @@ export default function Testimonial() {
                     <H5>
                         Johnson Johnson
                     </H5>
-                    <Container><img src={Quote} alt="Quote Image" /></Container>
+                    <Container><img src={Quote} alt="Quote" /></Container>
                     <Para>
                     There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,
                     </Para>
@@ -78,6 +88,9 @@ const H3 = styled.h3`
     font-size: 50px;
     font-weight: bold;
     margin-bottom: 20px;
+    @media all and (max-width: 480px){
+        font-size: 40px;
+    }
 `;
 const SlideDiv = styled.div`
     background: #d75430;
